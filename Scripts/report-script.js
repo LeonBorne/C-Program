@@ -76,7 +76,7 @@ function submitPassword() {
   // clear previous error
   errorEl.textContent = "";
 
-  if (pwd === "Admin") {
+  if (pwd === "youFool") {
     isAdmin = true;
     hideModal("password-modal");
     finishLogin();
