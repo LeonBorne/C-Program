@@ -3,7 +3,6 @@ const chatForm = document.getElementById("chat-form");
 const chatInput = document.getElementById("text-box");
 const whoami = document.getElementById("whoami");
 
-
 // --- Add Enter key support ---
 document.getElementById("username-input").addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
@@ -17,8 +16,7 @@ document.getElementById("password-input").addEventListener("keyup", (e) => {
   }
 });
 
-
-// --- State (no local/session storage) ---
+// --- State ---
 let username = "";
 let isAdmin = false;
 
@@ -37,6 +35,10 @@ function hideModal(id) { document.getElementById(id).style.display = "none"; }
 
 // --- Finish login: show chat form ---
 function finishLogin() {
+  // save to localStorage
+  localStorage.setItem("username", username);
+  localStorage.setItem("isAdmin", isAdmin ? "true" : "false");
+
   chatForm.style.display = "block";
   updateWhoAmI();
 }
@@ -76,7 +78,7 @@ function submitPassword() {
   // clear previous error
   errorEl.textContent = "";
 
-  if (pwd === "youFool") {
+  if (pwd === "Admin") {
     isAdmin = true;
     hideModal("password-modal");
     finishLogin();
@@ -99,7 +101,6 @@ document.getElementById("toggle-password").addEventListener("click", () => {
   }
 });
 
-
 //Switch to Username from Password
 function showUsernameModal(){
     username = "";
@@ -109,6 +110,9 @@ function showUsernameModal(){
     hideModal("password-modal");
     showModal("username-modal");
 
+    // clear localStorage too
+    localStorage.removeItem("username");
+    localStorage.removeItem("isAdmin");
 }
 
 // --- Enforce correct modal on load ---
@@ -122,12 +126,27 @@ function showUsernameModal(){
   hideModal("password-modal");
   hideModal("username-modal");
 
-  // always start with username modal
-  showModal("username-modal");
+  // try to load from localStorage
+  const savedUsername = localStorage.getItem("username");
+  const savedIsAdmin = localStorage.getItem("isAdmin") === "true";
+
+  if (savedUsername) {
+    username = savedUsername;
+    isAdmin = savedIsAdmin;
+
+    if (username === "TheFoolAdmin" && !isAdmin) {
+      // force password check if admin but not verified yet
+      showModal("password-modal");
+    } else {
+      finishLogin();
+    }
+  } else {
+    // no username saved, prompt for it
+    showModal("username-modal");
+  }
+
   updateWhoAmI();
 })();
-
-
 
 // --- Helpers ---
 function formatTime(ts) {
