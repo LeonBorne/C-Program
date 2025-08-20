@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 12</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>Check Odd/Even Numbers using Functions</h2>
+
+            <h3>Function without Arguments and without Return type</h3>
+            <pre>
+#include&lt;stdio.h&gt;
+void check();
+void main(){
+    check();
+}
+void check(){
+    int n;
+    printf("Enter a number : ");
+    scanf("%d", &n);
+    if(n%2 != 0){
+        printf("%d is an Odd number.", n);
+    }
+    else{
+        printf("%d is an Even number.", n);
+    }
+}
+</pre>
+
+            <h3>Explanation:</h3>
+
+            <p>
+                The following C program demonstrates the use of a function to check whether a number is even or odd.
+                First, the function <code>check()</code> is declared and later defined to perform the check.
+                In <code>main()</code>, the <code>check()</code> function is called to execute its task.
+                Inside the <code>check()</code> function, the variable <code>n</code> is declared as an integer to store
+                the user input.
+                The program prompts the user to enter a number using <code>printf()</code> and <code>scanf()</code>.
+                An <code>if-else</code> statement is used to check whether the number is odd or even:
+            <ul>
+                <li>If <code>n % 2 != 0</code>, it prints that the number is odd.</li>
+                <li>Otherwise, it prints that the number is even.</li>
+            </ul>
+            The result is displayed using the <code>printf()</code> function.
+            </p>
+
+            <h3>Function with Arguments and without Return type</h3>
+            <pre>
+#include&lt;stdio.h&gt;
+void check(int n);
+void main(){
+    int a; 
+    printf("Enter a number : ");
+    scanf("%d", &a);
+    check(a);
+}
+void check(int n){
+    if(n%2 != 0){
+        printf("%d is an Odd number.", n);
+    }
+    else{
+        printf("%d is an Even number.", n);
+    }
+}
+            </pre>
+
+            <h3>Explanation:</h3>
+            <p>
+                The following C program demonstrates the use of a function with a parameter to check whether a number is
+                even or odd.
+                First, the function <code>check(int n)</code> is declared to accept an integer as input.
+                In <code>main()</code>, the variable <code>a</code> is declared as an integer to store user input.
+                The program prompts the user to enter a number using <code>printf()</code> and <code>scanf()</code>.
+                The <code>check(a)</code> function is then called, passing the input value as an argument.
+                Inside the <code>check()</code> function, an <code>if-else</code> statement checks whether the number is
+                odd or even:
+            <ul>
+                <li>If <code>n % 2 != 0</code>, it prints that the number is odd.</li>
+                <li>Otherwise, it prints that the number is even.</li>
+            </ul>
+            The result is displayed using the <code>printf()</code> function.
+            </p>
+
+            <h3>Function without Arguments and with Return type</h3>
+            <pre>
+#include&lt;stdio.h&gt;
+int check();
+void main(){
+    int result = check();
+    if(result == 1){
+        printf("The number is an Odd number.");
+    }
+    else{
+        printf("The number is an Even Number.");
+    }
+}
+int check(){
+    int n;
+    printf("Enter a number : ");
+    scanf("%d", &n);
+    if(n%2 != 0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+</pre>
+
+            <h3>Explanation:</h3>
+
+            <p>
+                The following C program demonstrates the use of a function that returns a value to determine whether a
+                number is even or odd.
+                First, the function <code>check()</code> is declared to return an integer.
+                In <code>main()</code>, the return value of <code>check()</code> is stored in the variable
+                <code>result</code>.
+                Inside the <code>check()</code> function, the variable <code>n</code> is declared as an integer.
+                The program prompts the user to enter a number using <code>printf()</code> and <code>scanf()</code>.
+                An <code>if-else</code> statement checks whether the number is odd or even:
+            <ul>
+                <li>If <code>n % 2 != 0</code>, the function returns <code>1</code>.</li>
+                <li>Otherwise, the function returns <code>0</code>.</li>
+            </ul>
+            Back in <code>main()</code>, <code>result</code> is used in an <code>if-else</code> statement to print
+            whether the number is odd or even.
+            </p>
+
+
+            <h3>Function with Arguments and with Return type</h3>
+            <pre>
+#include&lt;stdio.h&gt;
+int check(int n);
+void main(){
+    int a;
+    printf("Enter a number : ");
+    scanf("%d", &a);
+    int result = check(a);
+    if(result == 1){
+        printf("The number is an Odd number.");
+    }
+    else{
+        printf("The number is an Even Number.");
+    }
+}
+int check(int n){
+    if(n%2 != 0){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+</pre>
+
+
+            <h3>Explanation:</h3>
+            <p>
+                The following C program demonstrates the use of a parameterized function that returns a value to
+                determine whether a number is even or odd.
+                First, the function <code>check(int n)</code> is declared to accept an integer and return <code>1</code>
+                if it is odd or <code>0</code> if it is even.
+                In <code>main()</code>, the variable <code>a</code> is declared to store user input.
+                The program prompts the user to enter a number using <code>printf()</code> and <code>scanf()</code>.
+                The <code>check(a)</code> function is called with the input value <code>a</code>, and its return value
+                is stored in <code>result</code>.
+                An <code>if-else</code> statement in <code>main()</code> uses <code>result</code> to print whether the
+                number is odd or even.
+            </p>
+
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>

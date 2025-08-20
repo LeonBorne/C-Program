@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 12</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>C Program to Add Two Numbers using Functions</h2>
+
+
+            <h3>Function without Argument and without Return type</h3>
+
+            <pre>
+#include&lt;stdio.h&gt;
+void add();
+void main(){
+    add();
+}
+void add(){
+    int a, b, sum;
+    printf("Enter the value of a : ");
+    scanf("%d", &a);
+    printf("Enter the value of b : ");
+    scanf("%d", &b);
+    sum = a + b;
+    printf("The sum of two numbers is : %d", sum);
+}
+</pre>
+
+            <h3>Explanation:</h3>
+            <p>
+                The following C program demonstrates the use of a function to add two numbers.
+                First, a function <code>add()</code> is declared and later defined to perform the addition.
+                In <code>main()</code>, the function <code>add()</code> is called to execute its task.
+                Inside the <code>add()</code> function, the variables <code>a</code>, <code>b</code>, and
+                <code>sum</code> are declared as integers.
+                The program prompts the user to enter the values of <code>a</code> and <code>b</code> using
+                <code>printf()</code> and <code>scanf()</code>.
+                Finally, it prints the sum of <code>a</code> and <code>b</code> using <code>printf()</code>.
+            </p>
+
+
+            <h3>Function with Arguments and without return type</h3>
+            <pre>
+#include&lt;stdio.h&gt;
+void add(int a, int b);
+void main(){
+    int x, y;
+    printf("Enter two numbers\n");
+    scanf("%d %d", &x, &y);
+    add(x, y);
+}
+void add(int a, int b){
+    int sum = a + b;
+    printf("The Sum of two numbers is : %d", sum);
+}
+</pre>
+            <h3>Explanation:</h3>
+            <p>
+                The following C program demonstrates the use of a function with parameters to add two numbers.
+                First, the function <code>add(int a, int b)</code> is declared to accept two integer arguments.
+                In <code>main()</code>, the variables <code>x</code> and <code>y</code> are declared to store user
+                input.
+                The program prompts the user to enter two numbers using <code>printf()</code> and <code>scanf()</code>,
+                and then calls the <code>add(x, y)</code> function, passing the input values as arguments.
+                Inside the <code>add()</code> function, the sum of the two numbers is calculated and displayed using
+                <code>printf()</code>.
+            </p>
+
+            <h3>Function without Arguments and with return type</h3>
+            <pre>
+#include&lt;stdio.h&gt;
+int add();
+void main(){
+    int sum = add();
+    printf("The Sum of two numbers is : %d", sum);
+}
+int add(){
+    int a, b;
+    printf("Enter two numbers\n");
+    scanf("%d %d", &a, &b);
+    return (a + b);
+}
+</pre>
+
+            <h3>Explanation:</h3>
+            <p>
+                The following C program demonstrates the use of a function that returns a value.
+                First, the function <code>add()</code> is declared to return an integer.
+                In <code>main()</code>, the function <code>add()</code> is called and its return value is stored in the
+                variable <code>sum</code>.
+                Inside the <code>add()</code> function, the variables <code>a</code> and <code>b</code> are declared as
+                integers.
+                The program prompts the user to enter two numbers using <code>printf()</code> and <code>scanf()</code>.
+                The function then returns the sum of the two numbers using <code>return (a + b);</code>, which is stored
+                in <code>sum</code> in <code>main()</code>.
+                Finally, the sum is displayed using <code>printf()</code>.
+            </p>
+        
+
+            <h3>Function With Arguments and Return type</h3>
+<pre>
+#include&lt;stdio.h&gt;
+int add(int a, int b);
+void main(){
+    int x, y, sum;
+    printf("Enter two numbers\n");
+    scanf("%d %d", &x, &y);
+    sum = add(x, y);
+    printf("The sum of two numbers is : %d", sum);
+}
+int add(int a, int b){
+    return (a + b);
+}
+</pre>
+
+<h3>Explanation:</h3>
+<p>
+    The following C program demonstrates the use of a function with parameters that returns a value.  
+    First, the function <code>add(int a, int b)</code> is declared to accept two integers and return their sum.  
+    In <code>main()</code>, the variables <code>x</code>, <code>y</code>, and <code>sum</code> are declared.  
+    The program prompts the user to enter two numbers using <code>printf()</code> and <code>scanf()</code>.  
+    The <code>add(x, y)</code> function is then called with <code>x</code> and <code>y</code> as arguments, and its return value is stored in <code>sum</code>.  
+    Finally, the sum is displayed using <code>printf()</code>.
+</p>
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>
