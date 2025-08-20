@@ -1,0 +1,55 @@
+
+
+main .code-section {
+    background-color: var(--dark-font-color);
+    max-width: 70vw;
+    margin: 5vh 15vw 5vh 15vw;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 8px -4px #595f70;
+}
+
+.code-section h2 {
+    padding: 10px;
+    text-decoration: underline yellow;
+    font-size: 1.8rem;
+    /* line-height: 1.4; */
+    text-align: center;
+}
+
+.code-section pre {
+    margin: 0px 5vw 0px 5vw;
+    padding: 1rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    background-color: #0c0c0c;
+    color: white;
+    border-radius: 10px;
+    line-height: 1.5;
+}
+
+.code-section pre::selection {
+    background-color: #9bbada;
+    color: black;
+}
+
+.code-section h3 {
+    color: white;
+    font-size: 1.4rem;
+    margin: 10px 10px 0px 10px;
+}
+
+.code-section p {
+    line-height: 1.6;
+    font-size: 1.01rem;
+    margin: 10px 0px 10px 10px;
+
+}
+
+code {
+    background: #544e4e;
+    padding: 2px 5px;
+    border-radius: 4px;
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+}

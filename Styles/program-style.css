@@ -1,0 +1,118 @@
+
+#search-bar-container {
+  display: flex;
+  justify-content: center;
+  margin: 25px auto;
+  max-width: 600px;
+  width: 100%;
+}
+
+
+#search-form {
+  display: flex;
+  width: 100%;
+  background-color: #1e1e1e;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+#search-input {
+  flex: 1;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: #eee;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+#search-input::placeholder {
+  color: #888;
+}
+
+
+#search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  background: #2c2c2c;
+  border: none;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+}
+
+#search-button:hover {
+  background: #3a3a3a;
+  transform: scale(1.05);
+}
+
+#search-button svg {
+  fill: #aaa;
+  transition: fill 0.25s;
+}
+
+#search-button:hover svg {
+  fill: #fff;
+}
+
+
+
+.programs-container{
+    margin: 0px 15vw 0px 15vw;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    gap: 10px;
+    height: 65vh;
+    overflow: auto;
+    padding: 5px;
+    
+}
+
+.programs-container::-webkit-scrollbar{
+    width: 5px;
+}
+
+.programs-container::-webkit-scrollbar-track{
+    background: var(--dark-font-color);
+
+}
+
+.programs-container::-webkit-scrollbar-thumb{
+    background: purple;
+}
+
+.programs-container::-webkit-scrollbar-thumb:hover{
+    background: rgb(119, 0, 119);
+}
+
+.program{
+    display: inline-block;
+    min-height: 55px;
+    text-align: left;
+    border-left: 5px solid cyan;
+    background-color: rgb(43, 43, 43);
+    padding: 10px;
+    margin: 0px;
+    min-width: 65vw;
+    text-decoration : none;
+    color: white;
+    box-sizing: border-box;
+    transition: border-bottom 0.1s;
+}
+
+.program:hover{
+    border-bottom: 2px solid yellow;
+}
+
+.program h3{
+    font-weight: 400;
+    font-size: 1.1rem;
+    /* border-bottom: 2px solid limegreen; */
+    margin: 3px;
+    display: inline-block;
+}
