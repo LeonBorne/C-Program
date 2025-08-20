@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 11</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>C Program to Add Two Numbers</h2>
+
+            <pre>
+#include&lt;stdio.h&gt;
+void main(){
+    int a, b, sum;
+    printf("Enter the value of a : ");
+    scanf("%d", &a);
+    printf("Enter the value of b : ");
+    scanf("%d", &b);
+    sum = a + b;
+    printf("%d + %d = %d", a, b, sum);
+}
+</pre>
+
+            <h3>Explanation:</h3>
+            <p>
+                The following C program takes two integers as input from the user and displays their sum.
+                First, the variables <code>a</code>, <code>b</code>, and <code>sum</code> are declared as integers.
+                The <code>scanf()</code> function is then used to read the input values into <code>a</code> and
+                <code>b</code>.
+                Next, the expression <code>sum = a + b</code> calculates the sum of the two numbers.
+                Finally, the result is displayed using the <code>printf()</code> function.
+            </p>
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 11</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>Find Greatest Number among two Numbers</h2>
+
+            <pre>
+#include&lt;stdio.h&gt;
+void main(){
+    int a, b, c;
+    printf("Enter any three numbers\n");
+    scanf("%d %d %d", &a, &b, &c);
+    if(a &gt; b && a &gt; c){
+        printf("%d is the greatest number.", a);
+    }
+    else if (b &gt; a && b &gt; c){
+        printf("%d is the greatest number.", b);
+    }
+    else{
+        printf("%d is the greatest number.", c);
+    }
+}
+</pre>
+            <h3>Explanation:</h3>
+            <p>
+                The following C program determines the greatest of three numbers entered by the user.
+                First, the variables <code>a</code>, <code>b</code>, and <code>c</code> are declared as integers to
+                store the input values.
+                The <code>printf()</code> function prompts the user to enter three numbers, and <code>scanf()</code>
+                reads the values into <code>a</code>, <code>b</code>, and <code>c</code>.
+                The program then uses an <code>if-else if-else</code> structure to compare the numbers:
+            <ul>
+                <li>If <code>a &gt; b</code> and <code>a &gt; c</code>, it prints that <code>a</code> is the greatest
+                    number.</li>
+                <li>Else if <code>b &gt; a</code> and <code>b &gt; c</code>, it prints that <code>b</code> is the
+                    greatest number.</li>
+                <li>Otherwise, it prints that <code>c</code> is the greatest number.</li>
+            </ul>
+            The result is displayed using the <code>printf()</code> function.
+            </p>
+
+            <h3>Improvements:</h3>
+
+            <p>
+                Currently, the program does not explicitly handle the case when two or more numbers are equal.
+                To handle all cases, you can modify the conditions or use nested <code>if</code> statements.
+            </p>
+
+
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>

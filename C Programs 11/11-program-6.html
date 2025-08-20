@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 11</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>C Program to check Odd/Even Number</h2>
+
+            <pre>
+#include&lt;stdio.h&gt;
+void main(){
+    int n;
+    printf("Enter a number : ");
+    scanf("%d", &n);
+    if(n%2 == 0){
+        printf("%d is an Even Number.", n);
+    }
+
+    else{
+        printf("%d is an Odd Number.", n);
+    }
+}
+</pre>
+
+            <h3>Explanation:</h3>
+
+            <p>
+                The following C program determines whether a number entered by the user is even or odd.
+                First, the variable <code>n</code> is declared as an integer to store the user input.
+                The <code>printf()</code> function prompts the user to enter a number, and <code>scanf()</code> reads
+                the input into <code>n</code>.
+                The program then uses an <code>if-else</code> statement to check the value of <code>n</code>:
+            <ul>
+                <li>If <code>n % 2 == 0</code>, the number is even, and it prints that <code>n</code> is an even number.
+                </li>
+                <li>Otherwise, the number is odd, and it prints that <code>n</code> is an odd number.</li>
+            </ul>
+            The result is displayed using the <code>printf()</code> function.
+            </p>
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>

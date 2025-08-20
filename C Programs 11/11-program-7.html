@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 11</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>Find Greatest Number among two Numbers</h2>
+
+            <pre>
+#include&lt;stdio.h&gt;
+void main(){
+    int a, b;
+    printf("Enter any two numbers\n");
+    scanf("%d %d", &a, &b);
+    if(a &gt; b){
+        printf("%d is greater than %d", a, b);
+    }
+    else{
+        printf("%d is greater than %d", b, a);
+    }
+}
+</pre>
+
+            <h3>Explanation:</h3>
+
+            <p>
+                The following C program determines which of the two numbers entered by the user is greater.
+                First, the variables <code>a</code> and <code>b</code> are declared as integers to store the user input.
+                The <code>printf()</code> function prompts the user to enter two numbers, and <code>scanf()</code> reads
+                the values into <code>a</code> and <code>b</code>.
+                The program then uses an <code>if-else</code> statement to compare the two numbers:
+            <ul>
+                <li>If <code>a &gt; b</code>, it prints that <code>a</code> is greater than <code>b</code>.</li>
+                <li>Otherwise, it prints that <code>b</code> is greater than <code>a</code>.</li>
+            </ul>
+            The result is displayed using the <code>printf()</code> function.
+            </p>
+
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>

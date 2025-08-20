@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 11</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>Check Uppercase or Lowercase Alphabet</h2>
+
+            <pre>
+#include&lt;stdio.h&gt;
+void main(){
+    char a;
+    printf("Enter an alphabet : ");
+    scanf("%c", &a);
+    if(a &gt;= 'A' && a &lt;= 'Z'){
+        printf("%c is an Uppercase Alphabet.", a);
+    }
+    else{
+        printf("%c is Lowercase ALphabet.", a);
+    }
+}
+</pre>
+            <h3>Explanation:</h3>
+
+            <p>
+                The following C program determines whether an alphabet entered by the user is uppercase or lowercase.
+                First, the variable <code>a</code> is declared as <code>char</code> to store the input character.
+                The <code>printf()</code> function prompts the user to enter an alphabet, and <code>scanf()</code> reads
+                the input into <code>a</code>.
+                The program then uses an <code>if-else</code> statement to check the case of the alphabet:
+            <ul>
+                <li>If <code>a</code> is between <code>'A'</code> and <code>'Z'</code>, it prints that the alphabet is
+                    uppercase.</li>
+                <li>Otherwise, it prints that the alphabet is lowercase.</li>
+            </ul>
+            The result is displayed using the <code>printf()</code> function.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>

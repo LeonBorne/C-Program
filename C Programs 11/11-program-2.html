@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 11</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>C Program Find Area of Rectangle</h2>
+
+            <pre>
+#include&lt;stdio.h&gt;
+void main(){
+    float l, b, area;
+    printf("Enter the value of length(l) : ");
+    scanf("%f", &l);
+    printf("Enter the value of breadth(b) : ");
+    scanf("%f", &b);
+    area = l * b;
+    printf("Area of the rectangle : %f", area);
+}
+</pre>
+
+            <h3>Explanation:</h3>
+            <p>
+                The following C program calculates the area of a rectangle based on user input.
+                First, the variables <code>l</code>, <code>b</code>, and <code>area</code> are declared as
+                <code>float</code> to allow decimal values.
+                The <code>printf()</code> function is used to prompt the user to enter the values of length
+                (<code>l</code>) and breadth (<code>b</code>).
+                The <code>scanf()</code> function then reads these values and stores them in the respective variables.
+                Next, the expression <code>area = l * b</code> computes the area of the rectangle.
+                Finally, the result is displayed using the <code>printf()</code> function.
+            </p>
+
+            <h3>Improvements:</h3>
+            <p>
+                By default, <code>printf("Area of the rectangle : %f", area)</code> displays the value with many decimal
+                places.
+                To limit the output to two decimal places, you can use:
+                <br><code>printf("Area of the rectangle : %.2f", area);</code>
+            </p>
+
+
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>

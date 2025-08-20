@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 11</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>Check Alphabet, Special Character or Number</h2>
+
+            <pre>
+#include&lt;stdio.h&gt;
+void main(){
+    char a;
+    printf("Enter a character : ");
+    scanf("%c", &a);
+    if((a &gt;= 'a' && a &lt;= 'z') || (a &gt;= 'A' && a &lt;= 'Z')){
+        printf("%c is an alphabet.", a);
+    }
+    else if(a &gt;= '0' && a &lt;= '9'){
+        printf("%c is a number.", a);
+    }
+    else{
+        printf("%c is a special character.", a);
+    }
+}
+</pre>
+            <h3>Explanation:</h3>
+
+            <p>
+                The following C program determines whether a character entered by the user is an alphabet, a number, or
+                a special character.
+                First, the variable <code>a</code> is declared as <code>char</code> to store the input character.
+                The <code>printf()</code> function prompts the user to enter a character, and <code>scanf()</code> reads
+                the input into <code>a</code>.
+                The program then uses an <code>if-else if-else</code> structure to check the type of the character:
+            <ul>
+                <li>If <code>a</code> is between <code>'a'</code> and <code>'z'</code> or between <code>'A'</code> and
+                    <code>'Z'</code>, it prints that the character is an alphabet.</li>
+                <li>If <code>a</code> is between <code>'0'</code> and <code>'9'</code>, it prints that the character is
+                    a number.</li>
+                <li>Otherwise, it prints that the character is a special character.</li>
+            </ul>
+            The result is displayed using the <code>printf()</code> function.
+            </p>
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>
