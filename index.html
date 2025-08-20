@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Home</title>
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <style>
+        .home-content {
+            padding: 40px 20px;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        div.images{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+
+        .intro-image {
+            max-width: 1000px;
+            height: 300px;
+            display: block;
+            margin: 0 auto 30px auto;
+            border-radius: 10px;
+        }
+
+        .intro-section h1 {
+            font-size: 2.5rem;
+            color: var(--light-font-color);
+            margin-bottom: 20px;
+        }
+
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+
+        .navigation-section div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+        }
+
+        .navigation-section div a {
+            display: inline-block;
+            width: 300px;
+            height: 200px;
+            text-decoration: none;
+            color: var(--light-font-color);
+            background-color: var(--dark-font-color);
+            color: var(--light-font-color);
+            padding: 30px;
+            border-radius: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
+        }
+
+        .navigation-section div a:hover {
+            background-color: #79c0ff;
+            color: var(--dark-font-color);
+            transform: translateY(-5px);
+        }
+
+        .navigation-section div a div h3 {
+            margin: auto;
+            border-bottom: 2px solid currentColor;
+        }
+
+        .navigation-section div a div {
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            gap: 0px;
+            padding-bottom: 20px;
+            /* border-bottom: 2px solid currentColor; */
+        }
+
+        footer{
+            background-color: var(--dark-font-color);
+            height: 200px;
+            padding: 0px 200px 0px 200px;
+            display: grid;
+            grid-template-columns: 1fr repeat(3);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="report.html">Report</a></li>
+            </ul>
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="programs-list-11.html">Grade 11</a></li>
+                <li><a href="programs-list-12.html">Grade 12</a></li>
+                <li><a href="extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+
+    </header>
+
+
+    <main class="home-content">
+        <section class="intro-section">
+            <div class="images">
+                <img src="Images/undraw_in-the-zone.svg" alt="c progarm Image 1" class="intro-image">
+                <img src="Images/undraw_dev-environment_n5by.svg" alt="c program Image 2" class="intro-image">
+            </div>
+            <h1>Welcome to C Programming</h1>
+            <p>
+                This platform is dedicated to helping Grade 11 and 12 students build a strong foundation in C
+                programming. Whether you're learning the basics or preparing for practical exams, you'll find a
+                comprehensive collection of C programs tailored to your academic level.
+            </p>
+            <p>
+                Each program is presented with clear logic, clean code, and helpful explanations to make learning both
+                effective and approachable. Our goal is to support your journey in understanding core programming
+                concepts through practical examples and structured practice.
+            </p>
+        </section>
+
+        <section class="navigation-section">
+
+            <div class="section-nav">
+                <a href="programs-list-11.html">
+                    <div>
+                        <h3>Grade 11</h3>
+                        <p>Grade 11 all C programs included the syallabus with clear explanations.</p>
+                    </div>
+                </a>
+                <a href="programs-list-12.html">
+                    <div>
+                        <h3>Grade 12</h3>
+                        <p>Grade 12 all C programs included in the syallabus with clear explanations.</p>
+                    </div>
+                </a>
+
+                <a href="extra-programs.html">
+                    <div>
+                        <h3>Extra Programs</h3>
+                        <p>Fun extra C programs to polish your skills.</p>
+                    </div>
+                </a>
+
+            </div>
+
+        </section>
+    </main>
+
+    
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3 class="footer-title">C Programs</h3>
+                <p class="footer-text">
+                    C program resource spot for grade 11 and 12.
+                </p>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-subtitle">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs-list-11.html">Grade 11 Programs</a></li>
+                    <li><a href="programs-list-12.html">Grade 12 Programs</a></li>
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="report.html">Customer Care</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-subtitle">Contact</h4>
+                <p class="footer-text">Report: <a id="mail-anchor"
+                        href="report.html">Customer Care</a></p>
+                <p class="footer-text">Location: Birtamode, Jhapa, Nepal</p>
+            </div>
+        </div>
+
+        <p class="footer-bottom-text">&copy; 2025 C Programs. All rights reserved.</p>
+    </footer>
+
+
+    <script src="Scripts/script.js"></script>
+</body>
+
+
+</html>
