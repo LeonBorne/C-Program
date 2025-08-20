@@ -26,6 +26,7 @@ main .code-section {
     color: white;
     border-radius: 10px;
     line-height: 1.5;
+    overflow-x: auto;
 }
 
 .code-section pre::selection {
