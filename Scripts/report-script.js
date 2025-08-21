@@ -1,44 +1,33 @@
+// --- State ---
+let username = "";
+let isAdmin = false;
+
 // --- UI elements ---
 const chatForm = document.getElementById("chat-form");
 const chatInput = document.getElementById("text-box");
 const whoami = document.getElementById("whoami");
 
-// --- Add Enter key support ---
-document.getElementById("username-input").addEventListener("keyup", (e) => {
-  if (e.key === "Enter") {
-    submitUsername();
-  }
-});
-
-document.getElementById("password-input").addEventListener("keyup", (e) => {
-  if (e.key === "Enter") {
-    submitPassword();
-  }
-});
-
-// --- State ---
-let username = "";
-let isAdmin = false;
-
+// --- Update status display ---
 function updateWhoAmI() {
   whoami.textContent = username
     ? `Signed in as: ${username}${isAdmin ? " (Admin)" : ""}`
     : "Not signed in";
 }
 
-// hide chat until login complete
-chatForm.style.display = "none";
-
-// --- Modals helpers ---
-function showModal(id) { document.getElementById(id).style.display = "flex"; }
-function hideModal(id) { document.getElementById(id).style.display = "none"; }
+// --- Modal helpers (null-safe) ---
+function showModal(id) {
+  const el = document.getElementById(id);
+  if (el) el.style.display = "flex";
+}
+function hideModal(id) {
+  const el = document.getElementById(id);
+  if (el) el.style.display = "none";
+}
 
 // --- Finish login: show chat form ---
 function finishLogin() {
-  // save to localStorage
   localStorage.setItem("username", username);
   localStorage.setItem("isAdmin", isAdmin ? "true" : "false");
-
   chatForm.style.display = "block";
   updateWhoAmI();
 }
@@ -49,7 +38,6 @@ function submitUsername() {
   const errorEl = document.getElementById("username-error");
   const input = inputEl.value.trim();
 
-  // clear previous error
   errorEl.textContent = "";
 
   if (!input) {
@@ -57,91 +45,49 @@ function submitUsername() {
     return;
   }
 
+  if (input === "TheFoolAdmin") {
+    // exact wording per your request
+    errorEl.textContent = "Username Unavailabe";
+    return;
+  }
+
   username = input;
-  isAdmin = false; // reset
+  isAdmin = false;
 
   hideModal("username-modal");
-
-  if (username === "TheFoolAdmin") {
-    showModal("password-modal");
-  } else {
-    finishLogin(); // regular user, skip password
-  }
+  finishLogin();
 }
 
-// --- Password flow ---
-function submitPassword() {
-  const pwdEl = document.getElementById("password-input");
-  const errorEl = document.getElementById("password-error");
-  const pwd = pwdEl.value;
-
-  // clear previous error
-  errorEl.textContent = "";
-
-  if (pwd === "Admin") {
-    isAdmin = true;
-    hideModal("password-modal");
-    finishLogin();
-  } else {
-    isAdmin = false;
-    errorEl.textContent = "Wrong password. Try again or continue as regular user.";
-  }
-}
-
-// --- Toggle password visibility ---
-document.getElementById("toggle-password").addEventListener("click", () => {
-  const pwdInput = document.getElementById("password-input");
-  const eye = document.getElementById("toggle-password");
-  if (pwdInput.type === "password") {
-    pwdInput.type = "text";
-    eye.textContent = "🙈"; // switch icon
-  } else {
-    pwdInput.type = "password";
-    eye.textContent = "👁"; // back to eye
+// --- QoL: allow Enter key in username input ---
+document.getElementById("username-input").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    submitUsername();
   }
 });
 
-//Switch to Username from Password
-function showUsernameModal(){
-    username = "";
-    isAdmin = false;
-    chatForm.style.display = "none";
-
-    hideModal("password-modal");
-    showModal("username-modal");
-
-    // clear localStorage too
-    localStorage.removeItem("username");
-    localStorage.removeItem("isAdmin");
-}
-
 // --- Enforce correct modal on load ---
 (function enforceLoginFlowOnLoad() {
-  // reset state
   username = "";
   isAdmin = false;
   chatForm.style.display = "none";
 
-  // make sure both modals are hidden first
-  hideModal("password-modal");
   hideModal("username-modal");
 
-  // try to load from localStorage
+  // Clear reserved username if stored
   const savedUsername = localStorage.getItem("username");
   const savedIsAdmin = localStorage.getItem("isAdmin") === "true";
 
-  if (savedUsername) {
+  if (savedUsername === "TheFoolAdmin") {
+    localStorage.removeItem("username");
+    localStorage.removeItem("isAdmin");
+  }
+
+  if (savedUsername && savedUsername !== "TheFoolAdmin") {
     username = savedUsername;
     isAdmin = savedIsAdmin;
-
-    if (username === "TheFoolAdmin" && !isAdmin) {
-      // force password check if admin but not verified yet
-      showModal("password-modal");
-    } else {
-      finishLogin();
-    }
+    finishLogin();
   } else {
-    // no username saved, prompt for it
     showModal("username-modal");
   }
 
