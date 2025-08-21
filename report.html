@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programs - Reports/Comments</title>
-    <link rel="stylesheet" href="Styles/style.css">
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/C-Program/Styles/style.css">
+    <link rel="shortcut icon" href="/C-Program/Images/favicon.ico" type="image/x-icon">
 
     <style>
         main {
@@ -53,21 +53,19 @@
             gap: 8px;
         }
 
-        #messages-container::-webkit-scrollbar{
+        #messages-container::-webkit-scrollbar {
             width: 5px;
         }
 
-
-        #messages-container::-webkit-scrollbar-track{
+        #messages-container::-webkit-scrollbar-track {
             background: var(--dark-font-color);
-
         }
 
-        #messages-container::-webkit-scrollbar-thumb{
+        #messages-container::-webkit-scrollbar-thumb {
             background: purple;
         }
 
-        #messages-container::-webkit-scrollbar-thumb:hover{
+        #messages-container::-webkit-scrollbar-thumb:hover {
             background: rgb(119, 0, 119);
         }
 
@@ -87,7 +85,7 @@
         }
 
         .self {
-            background-color: #2c313c;
+            background: linear-gradient(to right, #125064, #2b7789);
             margin-left: auto;
             color: #e0e0e0;
         }
@@ -97,6 +95,7 @@
             margin-right: auto;
             color: #f0f0f0;
         }
+
 
         .message.admin {
             background-color: #e43131 !important;
@@ -127,25 +126,6 @@
             color: #888;
         }
 
-        .password-wrapper {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        #password-input {
-            padding-right: 30px;
-            /* space for eye */
-        }
-
-        .toggle-eye {
-            position: absolute;
-            right: 8px;
-            cursor: pointer;
-            user-select: none;
-        }
-
-
         form button {
             padding: 10px 16px;
             border-radius: 8px;
@@ -164,7 +144,6 @@
         /* Modals */
         .modal {
             display: none;
-            /* transform: translate(-50%, -50%); */
             position: fixed;
             z-index: 100;
             inset: 0;
@@ -215,82 +194,59 @@
             margin-top: 5px;
         }
     </style>
-
 </head>
 
 <body>
-
-
     <header>
-
         <nav>
             <ul class="nav-ul">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="/C-Program/index.html">Home</a></li>
                 <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="report.html">Report</a></li>
+                <li><a href="/C-Program/about-us.html">About Us</a></li>
+                <li><a href="/C-Program/report.html">Report</a></li>
             </ul>
-
         </nav>
         <div id="extended-nav-section" class="hidden">
             <ul class="extended-nav-ul">
-                <li><a href="programs-list-11.html">Grade 11</a></li>
-                <li><a href="programs-list-12.html">Grade 12</a></li>
-                <li><a href="extra-programs.html">Extra Programs</a></li>
+                <li><a href="/C-Program/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/C-Program/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/C-Program/extra-programs.html">Extra Programs</a></li>
             </ul>
         </div>
     </header>
 
     <main>
+        <h2 style="text-align:center;">Comments</h2>
 
-    <h2 style="text-align:center;">Comments</h2>
-
-    <div class="topbar">
-        <div id="whoami" class="small"></div>
-    </div>
-
-    <div id="messages-container"></div>
-
-    <form id="chat-form" onsubmit="sendMessage(event)">
-        <input type="text" id="text-box" placeholder="Type a message">
-        <button type="submit">Send</button>
-    </form>
-
-    <!-- Username Modal -->
-    <div id="username-modal" class="modal">
-        <div class="modal-content">
-            <h3>Enter Username</h3>
-            <input type="text" id="username-input" placeholder="Username">
-            <div id="username-error" class="error-message"></div>
-            <button onclick="submitUsername()">Continue</button>
+        <div class="topbar">
+            <div id="whoami" class="small"></div>
         </div>
-    </div>
 
-    <!-- Admin Password Modal -->
-    <div id="password-modal" class="modal">
-        <div class="modal-content">
-            <h3>Admin Password</h3>
-            <div class="password-wrapper">
-                <input type="password" id="password-input" placeholder="Password">
-                <span id="toggle-password" class="toggle-eye">👁</span>
-            </div>
-            <div id="password-error" class="error-message"></div>
-            <div style="display: flex; flex-direction: column;">
-                <button onclick="submitPassword()">Login</button>
-                <a onclick="showUsernameModal()"
-                    style="font-size: 0.95rem; text-decoration: underline; cursor: pointer; margin-top: 5px;">Username</a>
+        <div id="messages-container"></div>
+
+        <form id="chat-form" onsubmit="sendMessage(event)">
+            <input type="text" id="text-box" placeholder="Type a message">
+            <button type="submit">Send</button>
+        </form>
+
+        <!-- Username Modal -->
+        <div id="username-modal" class="modal">
+            <div class="modal-content">
+                <h3>Enter Username</h3>
+                <input type="text" id="username-input" placeholder="Username">
+                <div id="username-error" class="error-message"></div>
+                <button onclick="submitUsername()">Continue</button>
             </div>
         </div>
-    </div>
     </main>
 
     <!-- Firebase SDKs -->
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
-    <script src="Scripts/database-script.js"></script>
-    <script src="Scripts/report-script.js"></script>
-     <script src="Scripts/script.js"></script>
+    <script src="/C-Program/Scripts/database-script.js"></script>
+    <script src="/C-Program/Scripts/report-script.js"></script>
+    <script src="/C-Program/Scripts/script.js"></script>
 </body>
 
 </html>
