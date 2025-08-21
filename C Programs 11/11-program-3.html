@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programs - Grade 11</title>
-    <link rel="shortcut icon" href="/C-Program/Images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/C-Program/Styles/style.css">
-    <link rel="stylesheet" href="/C-Program/Styles/code-style.css">
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
 </head>
 
 <body>
@@ -16,19 +16,52 @@
 
         <nav>
             <ul class="nav-ul">
-                <li><a href="/C-Program/index.html">Home</a></li>
+                <li><a href="/index.html">Home</a></li>
                 <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
-                <li><a href="/C-Program/about-us.html">About Us</a></li>
-                <li><a href="/C-Program/report.html">Report</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
             </ul>
 
         </nav>
         <div id="extended-nav-section" class="hidden">
             <ul class="extended-nav-ul">
-                <li><a href="/C-Program/programs-list-11.html">Grade 11</a></li>
-                <li><a href="/C-Program/programs-list-12.html">Grade 12</a></li>
-                <li><a href="/C-Program/extra-programs.html">Extra Programs</a></li>
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
             </ul>
+        </div>
+        <div class="burger-btn">
+            <a href="#" onclick="toggleBurger()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </a>
+        </div>
+        <div id="burger-container" class="hidden-burger-container">
+
+
+            <h3 id="burger-heading" class="hidden">
+                <a id="burger-a-tag" class="burger-btn hidden" onclick="toggleBurger()" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#FFFFFF">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </a>
+
+                Menu
+            </h3>
+
+            <ul id="burger-list" class="hidden">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
         </div>
     </header>
 
@@ -77,7 +110,7 @@ void main(){
 
 
 
-    <script src="/C-Program/Scripts/script.js"></script>
+    <script src="/Scripts/script.js"></script>
 </body>
 
 
