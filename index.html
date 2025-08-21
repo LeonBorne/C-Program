@@ -4,102 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programs - Home</title>
-    <link rel="stylesheet" href="Styles/style.css">
+    <title>Programs - Grade 11</title>
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-    <style>
-        .home-content {
-            padding: 40px 20px;
-            color: white;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        div.images{
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-        }
-
-        .intro-image {
-            max-width: 1000px;
-            height: 300px;
-            display: block;
-            margin: 0 auto 30px auto;
-            border-radius: 10px;
-        }
-
-        .intro-section h1 {
-            font-size: 2.5rem;
-            color: var(--light-font-color);
-            margin-bottom: 20px;
-        }
-
-        .intro-section p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 15px;
-        }
-
-
-        .navigation-section div {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-        }
-
-        .navigation-section div a {
-            display: inline-block;
-            width: 300px;
-            height: 200px;
-            text-decoration: none;
-            color: var(--light-font-color);
-            background-color: var(--dark-font-color);
-            color: var(--light-font-color);
-            padding: 30px;
-            border-radius: 10px;
-            box-sizing: border-box;
-            text-align: center;
-            transition: transform 0.3s, background-color 0.3s ease;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2)
-        }
-
-        .navigation-section div a:hover {
-            background-color: #79c0ff;
-            color: var(--dark-font-color);
-            transform: translateY(-5px);
-        }
-
-        .navigation-section div a div h3 {
-            margin: auto;
-            border-bottom: 2px solid currentColor;
-        }
-
-        .navigation-section div a div {
-            display: flex;
-            flex-direction: column;
-            margin: 0;
-            padding: 0;
-            gap: 0px;
-            padding-bottom: 20px;
-            /* border-bottom: 2px solid currentColor; */
-        }
-
-        footer{
-            background-color: var(--dark-font-color);
-            height: 200px;
-            padding: 0px 200px 0px 200px;
-            display: grid;
-            grid-template-columns: 1fr repeat(3);
-        }
-    </style>
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/program-style.css">
 </head>
 
 <body>
 
     <header>
+
         <nav>
             <ul class="nav-ul">
                 <li><a href="index.html">Home</a></li>
@@ -107,6 +21,7 @@
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="report.html">Report</a></li>
             </ul>
+
         </nav>
         <div id="extended-nav-section" class="hidden">
             <ul class="extended-nav-ul">
@@ -115,90 +30,104 @@
                 <li><a href="extra-programs.html">Extra Programs</a></li>
             </ul>
         </div>
+        <div class="burger-btn">
+            <a href="#" onclick="toggleBurger()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </a>
+        </div>
+        <div id="burger-container" class="hidden-burger-container">
 
+
+            <h3 id="burger-heading" class="hidden">
+                <a id="burger-a-tag" class="burger-btn hidden" onclick="toggleBurger()" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#FFFFFF">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </a>
+
+                Menu
+            </h3>
+
+            <ul id="burger-list" class="hidden">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs-list-11.html">Grade 11</a></li>
+                <li><a href="programs-list-12.html">Grade 12</a></li>
+                <li><a href="extra-programs.html">Extra Programs</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="report.html">Report</a></li>
+            </ul>
+
+        </div>
     </header>
 
 
-    <main class="home-content">
-        <section class="intro-section">
-            <div class="images">
-                <img src="Images/undraw_in-the-zone.svg" alt="c progarm Image 1" class="intro-image">
-                <img src="Images/undraw_dev-environment_n5by.svg" alt="c program Image 2" class="intro-image">
-            </div>
-            <h1>Welcome to C Programming</h1>
-            <p>
-                This platform is dedicated to helping Grade 11 and 12 students build a strong foundation in C
-                programming. Whether you're learning the basics or preparing for practical exams, you'll find a
-                comprehensive collection of C programs tailored to your academic level.
-            </p>
-            <p>
-                Each program is presented with clear logic, clean code, and helpful explanations to make learning both
-                effective and approachable. Our goal is to support your journey in understanding core programming
-                concepts through practical examples and structured practice.
-            </p>
-        </section>
+    <main>
 
-        <section class="navigation-section">
-
-            <div class="section-nav">
-                <a href="programs-list-11.html">
-                    <div>
-                        <h3>Grade 11</h3>
-                        <p>Grade 11 all C programs included the syallabus with clear explanations.</p>
-                    </div>
-                </a>
-                <a href="programs-list-12.html">
-                    <div>
-                        <h3>Grade 12</h3>
-                        <p>Grade 12 all C programs included in the syallabus with clear explanations.</p>
-                    </div>
-                </a>
-
-                <a href="extra-programs.html">
-                    <div>
-                        <h3>Extra Programs</h3>
-                        <p>Fun extra C programs to polish your skills.</p>
-                    </div>
-                </a>
-
-            </div>
-
-        </section>
-    </main>
-
-    
-    <footer class="site-footer">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3 class="footer-title">C Programs</h3>
-                <p class="footer-text">
-                    C program resource spot for grade 11 and 12.
-                </p>
-            </div>
-            <div class="footer-column">
-                <h4 class="footer-subtitle">Quick Links</h4>
-                <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="programs-list-11.html">Grade 11 Programs</a></li>
-                    <li><a href="programs-list-12.html">Grade 12 Programs</a></li>
-                    <li><a href="about-us.html">About Us</a></li>
-                    <li><a href="report.html">Customer Care</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 class="footer-subtitle">Contact</h4>
-                <p class="footer-text">Report: <a id="mail-anchor"
-                        href="report.html">Customer Care</a></p>
-                <p class="footer-text">Location: Birtamode, Jhapa, Nepal</p>
-            </div>
+        <div id="search-bar-container">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search programs..." aria-label="Search programs">
+                <button type="submit" id="search-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#555" viewBox="0 0 24 24">
+                        <path d="M10,2A8,8,0,1,0,18,10a8,8,0,0,0-8-8Zm0,14A6,6,0,1,1,16,10,6,6,0,0,1,10,16Z"></path>
+                        <line x1="21" y1="21" x2="15" y2="15" stroke="#555" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </form>
         </div>
+        
+        
+        
+        
+        <section class="programs-container">
+            <p id="no-results" style="display: none; color: white; margin-top: 10px;">No results found.</p>
 
-        <p class="footer-bottom-text">&copy; 2025 C Programs. All rights reserved.</p>
-    </footer>
+            <a href="C Programs 11/11-program-1.html" class="program">
+                <h3>Add two numbers</h3>
+            </a>
+
+            <a href="C Programs 11/11-program-2.html" class="program">
+                <h3>Find Area of Rectangle</h3>
+            </a>
+            <a href="C Programs 11/11-program-3.html" class="program">
+                <h3>Find Area of Circle</h3>
+            </a>
+            <a href="C Programs 11/11-program-4.html" class="program">
+                <h3>Find Volume of Sphere</h3>
+            </a>
+            <a href="C Programs 11/11-program-5.html" class="program">
+                <h3>Check Positive or Negative Number</h3>
+            </a>
+            <a href="C Programs 11/11-program-6.html" class="program">
+                <h3>Check Odd or Even Number</h3>
+            </a>
+            <a href="C Programs 11/11-program-7.html" class="program">
+                <h3>Find Greatest Number among 2 Numbers</h3>
+            </a>
+            <a href="C Programs 11/11-program-8.html" class="program">
+                <h3>Find Greatest Number among 3 Numbers</h3>
+            </a>
+            <a href="C Programs 11/11-program-9.html" class="program">
+                <h3>Check Alphabet, Number or Special Character</h3>
+            </a>
+            <a href="C Programs 11/11-program-10.html" class="program">
+                <h3>Check Uppercase or Lowercase Alphabet</h3>
+            </a>
+
+
+        </section>
+
+
+    </main>
 
 
     <script src="Scripts/script.js"></script>
-</body>
+    <script src="Scripts/search-script.js"></script>
 
+</body>
 
 </html>
