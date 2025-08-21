@@ -186,17 +186,17 @@ nav ul li a:hover,
 .site-footer {
     background-color: var(--dark-font-color);
     color: var(--light-font-color);
-    padding: 10px 20px;
+    padding: 10px 200px;
     font-size: 0.9rem;
     margin: 0;
-    height: auto;
+    height: 225px;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 40px
 }
 
 .footer-column {
@@ -275,8 +275,12 @@ nav ul li a:hover,
         display: flex;
     }
 
+    .site-footer{
+        padding: 10px 50px;
+        height: auto;
+    }
 
-
-
-
+    .footer-container{
+        gap: 0px;
+    }
 }
