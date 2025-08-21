@@ -186,16 +186,17 @@ nav ul li a:hover,
 .site-footer {
     background-color: var(--dark-font-color);
     color: var(--light-font-color);
-    padding: 10px 200px;
+    padding: 10px 20px;
     font-size: 0.9rem;
     margin: 0;
+    height: auto;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 40px
+    gap: 10px;
 }
 
 .footer-column {
@@ -273,4 +274,9 @@ nav ul li a:hover,
     #burger-container {
         display: flex;
     }
+
+
+
+
+
 }
