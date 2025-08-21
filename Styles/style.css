@@ -2,17 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --main-background-color : #0f1117;
-    --dark-font-color : #1b1f2a;
-    --light-font-color : #58a6ff;   
-} 
+    --main-background-color: #0f1117;
+    --dark-font-color: #1b1f2a;
+    --light-font-color: #58a6ff;
+}
 
-::selection{
+::selection {
     color: black;
     background-color: cyan;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -25,10 +25,10 @@ body {
     color: white;
 }
 
-header{
+header {
     position: sticky;
     top: 0;
-    background-color: var(--dark-font-color );
+    background-color: var(--dark-font-color);
     color: var(--light-font-color);
     margin: 0px;
     padding: 5px;
@@ -43,12 +43,14 @@ nav ul {
     gap: 35px;
 }
 
-nav ul li, #extended-nav-section ul li {
+nav ul li,
+#extended-nav-section ul li {
     padding: 10px;
     border-radius: 5px;
 }
 
-nav ul li a, #extended-nav-section ul li a{
+nav ul li a,
+#extended-nav-section ul li a {
     text-decoration: none;
     color: var(--light-font-color);
     padding: 10px;
@@ -56,19 +58,20 @@ nav ul li a, #extended-nav-section ul li a{
     transition: all 0.2s;
 }
 
-nav ul li a:hover, #extended-nav-section ul li a:hover {
+nav ul li a:hover,
+#extended-nav-section ul li a:hover {
     background-color: #79c0ff;
-    color: var(--dark-font-color );
+    color: var(--dark-font-color);
 
 }
 
-#showprogram-nav-btn{
+#showprogram-nav-btn {
     cursor: pointer;
 }
 
-#extended-nav-section{
+#extended-nav-section {
     position: fixed;
-    background-color: var(--dark-font-color );
+    background-color: var(--dark-font-color);
     width: 200px;
     height: 160px;
     top: 58px;
@@ -76,7 +79,7 @@ nav ul li a:hover, #extended-nav-section ul li a:hover {
     border-radius: 5px;
 }
 
-#extended-nav-section ul{
+#extended-nav-section ul {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -87,19 +90,96 @@ nav ul li a:hover, #extended-nav-section ul li a:hover {
     margin: 0;
 }
 
-#extended-nav-section ul li{
+#extended-nav-section ul li {
     padding: 0;
 }
 
-#extended-nav-section ul li a{
+#extended-nav-section ul li a {
     display: block;
     width: 150px;
     margin: 0;
     padding: 10px;
 }
 
-.hidden{
+.hidden {
     display: none !important;
+}
+
+
+
+#burger-container {
+    position: fixed;
+    left: 0;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--main-background-color);
+    transition: all 0.4s ease-in-out;
+}
+
+.open-burger-container {
+    top: 0;
+    height: 100vh;
+}
+
+.hidden-burger-container {
+    height: 0px;
+    top: -20px;
+
+}
+
+.burger-btn {
+    display: none;
+}
+
+#burger-container {
+    display: none;
+}
+
+#burger-container #burger-a-tag {
+    left: 25vw;
+    position: absolute;
+
+}
+
+#burger-container h3 {
+    border-bottom: 2px solid white;
+    display: block;
+    width: 50vw;
+    text-align: center;
+}
+
+
+#burger-container ul {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#burger-container ul li {
+    list-style-type: none;
+}
+
+#burger-container ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #4a3197;
+    display: block;
+    width: 50vw;
+    text-align: center;
+}
+
+#burger-container ul li a:hover {
+    background-color: #382572;
 }
 
 
@@ -154,7 +234,7 @@ nav ul li a:hover, #extended-nav-section ul li a:hover {
     transition: color 0.3s;
 }
 
-.footer-links a:hover{
+.footer-links a:hover {
     text-decoration: underline;
 }
 
@@ -162,7 +242,7 @@ nav ul li a:hover, #extended-nav-section ul li a:hover {
     color: #79c0ff;
 }
 
-#mail-anchor{
+#mail-anchor {
     color: blue;
 }
 
@@ -173,4 +253,24 @@ nav ul li a:hover, #extended-nav-section ul li a:hover {
     font-size: 1rem;
     margin: 0;
     color: white;
+}
+
+
+
+@media only screen and (max-width : 600px) {
+    nav {
+        display: none;
+    }
+
+
+    header .burger-btn {
+        margin: 5px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    #burger-container {
+        display: flex;
+    }
 }
