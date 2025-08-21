@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +8,15 @@
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="Styles/style.css">
     <link rel="stylesheet" href="Styles/program-style.css">
+    <style>
+
+
+
+    </style>
 </head>
+
 <body>
-    
+
     <header>
 
         <nav>
@@ -19,7 +26,7 @@
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="report.html">Report</a></li>
             </ul>
-    
+
         </nav>
         <div id="extended-nav-section" class="hidden">
             <ul class="extended-nav-ul">
@@ -28,6 +35,43 @@
                 <li><a href="extra-programs.html">Extra Programs</a></li>
             </ul>
         </div>
+        
+
+        <div class="burger-btn">
+            <a href="#" onclick="toggleBurger()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </a>
+        </div>
+        <div id="burger-container" class="hidden-burger-container">
+
+
+            <h3 id="burger-heading" class="hidden">
+                <a id="burger-a-tag" class="burger-btn hidden" onclick="toggleBurger()" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#FFFFFF">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </a>
+
+                Menu
+            </h3>
+
+            <ul id="burger-list" class="hidden">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="programs-list-11.html">Grade 11</a></li>
+                <li><a href="programs-list-12.html">Grade 12</a></li>
+                <li><a href="extra-programs.html">Extra Programs</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="report.html">Report</a></li>
+            </ul>
+
+        </div>
+
+
     </header>
 
 
@@ -46,10 +90,10 @@
                 </button>
             </form>
         </div>
-        
-        
-        
-        
+
+
+
+
         <section class="programs-container">
             <p id="no-results" style="display: none; color: white; margin-top: 10px;">No results found.</p>
 
@@ -69,8 +113,9 @@
 
 
     </main>
-    
+
     <script src="Scripts/script.js"></script>
     <script src="Scripts/search-script.js"></script>
 </body>
+
 </html>
