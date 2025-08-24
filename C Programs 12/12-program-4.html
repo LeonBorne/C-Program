@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 12</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+        <div class="burger-btn">
+            <a href="#" onclick="toggleBurger()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </a>
+        </div>
+        <div id="burger-container" class="hidden-burger-container">
+
+
+            <h3 id="burger-heading" class="hidden">
+                <a id="burger-a-tag" class="burger-btn hidden" onclick="toggleBurger()" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#FFFFFF">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </a>
+
+                Menu
+            </h3>
+
+            <ul id="burger-list" class="hidden">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>Store and Display details of 5 students using structure</h2>
+
+            <pre>
+#include&lt;stdio.h&gt;
+
+struct student{
+    int id;
+    char name[20];
+    char address[20];
+    float marks[3];
+} s[5];
+
+void main(){
+    int i, j;
+    
+    printf("Input the details of the students\n");
+    for(i = 0; i &lt; 5; i++){
+        printf("For Student no. %d\n", i+1);
+        printf("Enter Id : ");
+        scanf("%d", &s[i].id);
+        printf("Enter Name : ");
+        scanf("%s", s[i].name);
+        printf("Enter Address : ");
+        scanf("%s", s[i].address);
+
+        for(j = 0; j &lt; 3; j++){
+            printf("Enter marks of subject %d : ", j+1);
+            scanf("%f", &s[i].marks[j]);
+        }
+    }
+
+    printf("Displaying the detials of the student\n");
+    for(i = 0; i &lt; 5; i++){
+        printf("Details of Student no %d\n", i+1);
+        printf("Id : %d\n", s[i].id);
+        printf("Name : %s\n", s[i].name);
+        printf("Address : %s\n", s[i].address);
+
+        for(j = 0; j &lt; 3; j++){
+            printf("Marks of subject %d : %.2f\n", j+1,s[i].marks[j]);
+        }
+    }
+}
+</pre>
+
+
+            <h3>Explanation:</h3>
+            <p>
+                The following C program demonstrates the use of <code>struct</code> with arrays to store and display the
+                details of multiple students.
+                A structure named <code>student</code> is defined with the following members:
+            <ul>
+                <li><code>id</code> (integer) - stores the student's ID</li>
+                <li><code>name[20]</code> (character array) - stores the student's name</li>
+                <li><code>address[20]</code> (character array) - stores the student's address</li>
+                <li><code>marks[3]</code> (float array) - stores marks of 3 subjects</li>
+            </ul>
+            An array <code>s[5]</code> is declared to store the details of 5 students.
+            Using a <code>for</code> loop, the program asks the user to input the details of each student.
+            Inside the loop, another <code>for</code> loop is used to input marks for 3 subjects.
+            After input is complete, another set of <code>for</code> loops displays the details of all 5 students,
+            including their marks.
+            The marks are printed using <code>%.2f</code> to display two decimal places.
+            </p>
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>
