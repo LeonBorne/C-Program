@@ -168,18 +168,19 @@ nav ul li a:hover,
 }
 
 #burger-container ul li a {
-    color: white;
+    color: var(--dark-font-color);
     text-decoration: none;
     padding: 5px;
     border-radius: 10px;
-    background-color: #4a3197;
+    background-color: #49a8ff;
     display: block;
     width: 50vw;
     text-align: center;
+    font-weight: 500;
 }
 
 #burger-container ul li a:hover {
-    background-color: #382572;
+    background-color: #80c8f8;
 }
 
 
