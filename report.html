@@ -9,7 +9,7 @@
     <link rel="shortcut icon" href="/C-Program/Images/favicon.ico" type="image/x-icon">
 
     <style>
-        main {
+                main {
             width: 98vw;
             overflow-x: hidden;
             font-family: "Poppins", "Roboto", sans-serif;
@@ -28,7 +28,7 @@
         }
 
         .topbar {
-            width: 500px;
+            /* width: 500px; */
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -193,6 +193,34 @@
             font-size: 0.9rem;
             margin-top: 5px;
         }
+
+        @media only screen and (max-width : 600px){
+
+            #messages-container{
+                width: 80vw;
+                margin: 5vw;
+            }
+
+            .message{
+                font-size: 12px;
+            }
+
+            #chat-form{
+                width: 90vw;
+                margin: 0 5vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                
+            }
+
+            #chat-form input{
+                width: 80vw;
+
+            }
+        }
+        
     </style>
 </head>
 
