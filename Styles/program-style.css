@@ -58,14 +58,11 @@
 }
 
 
-
 .programs-container{
     margin: 0px 15vw 0px 15vw;
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-rows: auto;
-    grid-template-columns: auto;
     gap: 10px;
     height: 65vh;
     overflow: auto;
@@ -92,17 +89,18 @@
 
 .program{
     display: inline-block;
-    min-height: 55px;
     text-align: left;
     border-left: 5px solid cyan;
     background-color: rgb(43, 43, 43);
     padding: 10px;
-    margin: 0px;
     min-width: 65vw;
     text-decoration : none;
     color: white;
     box-sizing: border-box;
+    border-bottom: 2px solid var(--main-background-color);
     transition: border-bottom 0.1s;
+
+
 }
 
 .program:hover{
