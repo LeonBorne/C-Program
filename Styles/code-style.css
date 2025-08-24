@@ -26,7 +26,7 @@ main .code-section {
     color: white;
     border-radius: 10px;
     line-height: 1.5;
-    overflow-x: auto;
+    overflow: auto;
 }
 
 .code-section pre::selection {
@@ -42,7 +42,7 @@ main .code-section {
 
 .code-section p {
     line-height: 1.6;
-    font-size: 1.01rem;
+    font-size: 1rem;
     margin: 10px 0px 10px 10px;
 
 }
@@ -53,4 +53,31 @@ code {
     border-radius: 4px;
     font-family: "Courier New", monospace;
     font-size: 0.9rem;
+}
+
+
+
+@media only screen and (max-width: 600px){
+
+    main .code-section{
+        max-width: 90vw;
+        margin: 5vh 5vw;
+        padding: 5px;
+    }
+
+    .code-section h2{
+        font-size: 1.6rem;
+
+    }
+
+    .code-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .code-section p{
+        text-align: justify;
+    }
+
+   
+
 }
