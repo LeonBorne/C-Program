@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - Grade 12</title>
+    <link rel="shortcut icon" href="/Images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/Styles/style.css">
+    <link rel="stylesheet" href="/Styles/code-style.css">
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+            <ul class="nav-ul">
+                <li><a href="/index.html">Home</a></li>
+                <li><a id="showprogram-nav-btn" onclick="toggleProgramNav()">Programs &#9660;</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </nav>
+        <div id="extended-nav-section" class="hidden">
+            <ul class="extended-nav-ul">
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+            </ul>
+        </div>
+        <div class="burger-btn">
+            <a href="#" onclick="toggleBurger()">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                </svg>
+            </a>
+        </div>
+        <div id="burger-container" class="hidden-burger-container">
+
+
+            <h3 id="burger-heading" class="hidden">
+                <a id="burger-a-tag" class="burger-btn hidden" onclick="toggleBurger()" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                        fill="#FFFFFF">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg>
+                </a>
+
+                Menu
+            </h3>
+
+            <ul id="burger-list" class="hidden">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/programs-list-11.html">Grade 11</a></li>
+                <li><a href="/programs-list-12.html">Grade 12</a></li>
+                <li><a href="/extra-programs.html">Extra Programs</a></li>
+                <li><a href="/about-us.html">About Us</a></li>
+                <li><a href="/report.html">Report</a></li>
+            </ul>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="code-section">
+            <h2>Input details of Student and display it using Structure</h2>
+
+<pre>
+#include&lt;stdio.h&gt;
+
+struct student{
+    int id;
+    char name[20];
+    char address[20];
+    float marks;
+} s;
+
+void main(){
+    printf("Input the details of a student\n");
+    printf("Enter Id : ");
+    scanf("%d", &s.id);
+    printf("Enter Name : ");
+    scanf("%s", s.name);
+    printf("Enter Address : ");
+    scanf("%s", s.address);
+    printf("Enter marks : ");
+    scanf("%f", &s.marks);
+
+    printf("Displaying the detials of the student\n");
+    printf("Id : %d\n", s.id);
+    printf("Name : %s\n", s.name);
+    printf("Address : %s\n", s.address);
+    printf("Marks : %.2f\n", s.marks);
+}
+</pre>
+            
+
+            <h3>Explanation:</h3>
+            <p>
+                <p>
+    The following C program demonstrates the use of a <code>struct</code> in C to store and display the details of a student.  
+    A structure named <code>student</code> is defined with four members:  
+    <ul>
+        <li><code>id</code> (integer) - to store the student's ID</li>
+        <li><code>name[20]</code> (character array) - to store the student's name</li>
+        <li><code>address[20]</code> (character array) - to store the student's address</li>
+        <li><code>marks</code> (float) - to store the student's marks</li>
+    </ul>
+    An object <code>s</code> of type <code>struct student</code> is declared globally.  
+    In <code>main()</code>, the program prompts the user to input all the details of the student using <code>scanf()</code>.  
+    Finally, the entered details are displayed using <code>printf()</code>.  
+    The marks are displayed with <code>%.2f</code> formatting so that only two decimal places are shown.
+</p>
+
+
+            </p>
+
+
+
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="/Scripts/script.js"></script>
+</body>
+
+
+</html>
